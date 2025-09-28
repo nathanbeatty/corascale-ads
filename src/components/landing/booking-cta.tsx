@@ -35,7 +35,7 @@ export default function BookMeetingCTA() {
         <div className="flex flex-col w-full max-w-lg mx-auto rounded-2xl mt-5 md:mt-0 md:p-6">
           
           <EmailSubmit />
-          <Scarcity />
+          {/* <Scarcity /> */}
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function EmailSubmit() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    brokerage: '',
+    business: '',
   })
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -37,7 +37,7 @@ export default function EmailSubmit() {
       const formdata = new FormData()
       formdata.append('name', formData.name)
       formdata.append('email', formData.email)
-      formdata.append('brokerage', formData.brokerage || '')
+      formdata.append('business', formData.business || '')
       formdata.append('access_key', 'fab20e4c-125f-450a-867f-7a097202b646') // replace with your Web3Forms access key
 
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -50,7 +50,7 @@ export default function EmailSubmit() {
       if (data.success) {
         setResult('✅ Form Submitted Successfully')
         setSubmitted(true)
-        setFormData({ name: '', email: '', brokerage: '' })
+        setFormData({ name: '', email: '', business: '' })
       } else {
         setResult(data.message || 'Error submitting form.')
       }
@@ -63,8 +63,8 @@ export default function EmailSubmit() {
   }
 
   return (
-    <div className="w-full mt-5 p-6 border rounded-2xl border-black overflow-hidden tracking-tight">
-      <p className="mb-5 font-semibold">Inquiry Form</p>
+    <div className="w-full mt-5 p-6 shadow-lg rounded-2xl border-black overflow-hidden tracking-tight">
+      
 
       {!submitted ? (
         <form onSubmit={handleSubmit} className="grid gap-4">
@@ -96,7 +96,7 @@ export default function EmailSubmit() {
               name="business"
               type="text"
               placeholder="Your Business"
-              value={formData.brokerage}
+              value={formData.business}
               onChange={handleChange}
             />
           </div>

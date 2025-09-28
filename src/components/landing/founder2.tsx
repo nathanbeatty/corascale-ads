@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
-
+import greece from '@/images/greece.jpeg'
 export default function FounderCardTwo() {
   return (
     <div className="relative max-w-3xl mx-auto rounded-3xl py-16 px-6 md:px-12 text-center backdrop-blur-2xl bg-white/10 ">
@@ -17,12 +17,11 @@ export default function FounderCardTwo() {
 
       {/* Name & Title */}
       <div className="flex items-center justify-center gap-5 mt-10 border w-fit mx-auto rounded-2xl p-4">
-        <div className="w-16 h-16  rounded-full overflow-hidden ">
+        <div className="w-16 h-16 relative  rounded-full overflow-hidden ">
         <Image
-          src="https://i.pinimg.com/736x/f6/f6/cc/f6f6cc8f246b41d232226f25e3f3cd36.jpg"
+          src={greece}
           alt="Founder"
-          width={112}
-          height={112}
+          fill
           className="object-cover"
         />
       </div>

@@ -9,7 +9,7 @@ export default function BookMeetingCTA() {
     <section id="BOOKCTA" className="dark:bg-muted/25 py-5">
       <div className="max-w-xl mx-auto">
         {/* Text */}
-        <div className="flex flex-col w-full gap-6 px-6 pt-20 md:px-10 text-center">
+        <div className="flex flex-col w-full gap-6 pt-20 md:px-10 text-center">
           <h2 className="text-3xl font-medium mx-auto tracking-tight">
             Get a Free{" "}
             <span className="inline-flex items-center gap-2 font-inter text-lg tracking-tight font-medium rounded-full px-4 py-1 border border-gray-300 bg-white ">

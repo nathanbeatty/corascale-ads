@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative flex justify-center items-center w-full">
+    <div className="relative flex justify-center items-center mb-10 w-full">
       {/* Background Image */}
       <Image
         src="https://i.pinimg.com/736x/00/c6/9a/00c69a8abbe41d20263e894b65c250df.jpg"
@@ -16,7 +16,7 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="relative z-10 w-full  px-6 md:px-20 py-24 md:py-40 text-white text-center backdrop-blur-2xl rounded-4xl">
+      <div className="relative z-10 w-full  px-6 md:px-20 py-15 md:py-40 text-white text-center backdrop-blur-2xl rounded-4xl">
         {/* Badge */}
         <span className="border border-white/30 bg-white/10 rounded-full mb-6 px-3 py-1 inline-flex items-center font-medium tracking-tight text-xs md:text-sm">
           <CheckCircle2 className="mr-2 size-4" /> Google Ads Certified Expert

@@ -13,7 +13,7 @@ export default function Home() {
     <div className="">
     <div className="font-inter tracking-tight">
       
-      <div className="grid gap-5 mt-10 p-4 md:px-8">
+      <div className="grid gap-5 md:mt-8 p-4 md:px-8">
       <Header/>
       <Hero/>
       <ProblemSolution/>

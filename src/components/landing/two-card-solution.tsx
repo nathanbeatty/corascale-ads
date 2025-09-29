@@ -41,7 +41,7 @@ function SolutionCard({ icon, title, description, stat, lucideIcon: Icon }: Card
 
 export default function TwoCardSolution() {
   return (
-    <section className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto py-12">
+    <section className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto py-10">
       <SolutionCard
         icon="https://i.pinimg.com/736x/2f/4e/42/2f4e4299cd135ad92c494b560f017c41.jpg"
         title="Spend Smarter"

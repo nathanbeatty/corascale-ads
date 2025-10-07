@@ -22,10 +22,10 @@ export default function BeforeAfterCorascale() {
   ]
 
   return (
-    <section className="py-24 px-6 bg-white dark:bg-neutral-950">
+    <section className="  bg-white dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
             You Focus on What Matters
           </h2>

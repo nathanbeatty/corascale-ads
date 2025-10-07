@@ -36,7 +36,7 @@ export default function TimelineImplementation() {
   ]
 
   return (
-    <section className="px-6 bg-white dark:bg-neutral-950">
+    <section className=" bg-white dark:bg-neutral-950">
       <div className="max-w-5xl mx-auto">
         <Card className="shadow-none border-0">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">

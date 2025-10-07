@@ -63,7 +63,7 @@ export default function EmailSubmit() {
   }
 
   return (
-    <div className="w-full mt-5 p-6 shadow-lg rounded-2xl border-black overflow-hidden tracking-tight">
+    <div className="w-full mt-5 p-6 shadow-lg border  rounded-2xl border-gray-200 overflow-hidden tracking-tight">
       
 
       {!submitted ? (
@@ -105,7 +105,7 @@ export default function EmailSubmit() {
           {result && <p className="text-green-500 text-sm">{result}</p>}
 
           <Button type="submit" size="xl" variant="default" disabled={loading}>
-            {loading ? 'Submitting...' : 'Submit'} <ArrowRight />
+            {loading ? 'Requesting...' : 'Request Meeting'} <ArrowRight />
           </Button>
         </form>
       ) : (

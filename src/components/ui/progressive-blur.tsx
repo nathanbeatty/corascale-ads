@@ -20,7 +20,7 @@ export function ProgressiveBlur({
   direction = 'bottom',
   blurLayers = 8,
   className,
-  blurIntensity = 10,
+  blurIntensity = 0.25,
   ...props
 }: ProgressiveBlurProps) {
   const layers = Math.max(blurLayers, 2);

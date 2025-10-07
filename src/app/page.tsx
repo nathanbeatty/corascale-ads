@@ -5,19 +5,26 @@ import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
 import BookMeetingCTA from "@/components/landing/booking-cta";
 import ProblemSolution from "@/components/landing/problem-solution";
-import FounderCard from "@/components/landing/founder";
+
+import BeforeAfterCorascale from "@/components/landing/beforeafter";
+
+import TimelineImplementation from "@/components/landing/timeline";
+import FounderCardThree from "@/components/landing/founder3";
 import FounderCardTwo from "@/components/landing/founder2";
-import TwoCardSolution from "@/components/landing/two-card-solution";
 export default function Home() {
   return (
     <div className="">
     <div className="font-inter tracking-tight">
-      
-      <div className="grid gap-5 md:mt-8 p-4 md:px-8">
+      <div className="md:mt-8 p-4 md:px-8">
       <Header/>
+      </div>
+      <div className="grid gap-5 md:gap-20 p-4 md:px-8">
+      
       <Hero/>
       <ProblemSolution/>
-      <TwoCardSolution/>
+      {/* <TwoCardSolution/> */}
+      <BeforeAfterCorascale/>
+      <TimelineImplementation/>
       {/* <FounderCard/> */}
       <FounderCardTwo/>
       <BookMeetingCTA/>
@@ -27,6 +34,7 @@ export default function Home() {
      <div className=" flex items-center gap-2 font-mono text-sm"> <ChevronRight className = "size-4"/> <Asterisk className = "size-4"/> 2025_</div>
      </div>
      </div>
+     
      </div>
      </div>
     

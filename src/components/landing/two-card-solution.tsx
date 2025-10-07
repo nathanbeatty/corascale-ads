@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ChartArea, ChartSpline, DollarSign, LucideIcon, Users } from "lucide-react";
+import { Calendar, ChartArea, ChartSpline, DollarSign, LucideIcon, TrendingUp, Users } from "lucide-react";
 
 interface CardProps {
   icon: string;
@@ -42,20 +42,24 @@ function SolutionCard({ icon, title, description, stat, lucideIcon: Icon }: Card
 export default function TwoCardSolution() {
   return (
     <section className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto py-10">
+    
       <SolutionCard
         icon="https://i.pinimg.com/736x/2f/4e/42/2f4e4299cd135ad92c494b560f017c41.jpg"
-        title="Spend Smarter"
-        description="Stop wasting money on clicks that don’t convert. We optimize your Google Ads so every dollar works harder for you."
-        stat="On average clients save 10–20% of ad spend"
-        lucideIcon={ChartSpline}
+        title="Save Your Time"
+        description="Stop wasting hours on cold outreach that gets ignored. We handle the entire process—prospecting, messaging, and follow-ups—so you can focus on closing deals."
+        stat="No more chasing leads without results"
+        lucideIcon={TrendingUp}
       />
       <SolutionCard
         icon="https://i.pinimg.com/736x/5b/d6/ff/5bd6ffeed99497524c0ce078895a44c5.jpg"
-        title="Get More Clients"
-        description="Turn more clicks into real customers. With precise targeting and data-driven campaigns, we bring you more calls and bookings."
-        stat="Clients typically see 2–3x more leads"
-        lucideIcon={Users}
+        title="Fill Your Calendar"
+        description="Get a steady stream of qualified appointments with decision-makers who actually want to talk. No more empty calendars or chasing unresponsive leads."
+        stat="Average 10-15 qualified meetings per month"
+        lucideIcon={Calendar}
       />
+
+      
+      
     </section>
   );
 }

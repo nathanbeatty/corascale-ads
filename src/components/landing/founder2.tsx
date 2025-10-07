@@ -9,15 +9,14 @@ export default function FounderCardTwo() {
 
       {/* Quote */}
       <p className="mt-6 text-xl md:text-2xl leading-relaxed tracking-tight font-light max-w-xl mx-auto ">
-        {/* <ShieldCheck className="inline-block text-green-400 mb-1 mr-2 size-5" /> */}
-        “I personally <span className="font-medium">manage your account</span> and 
-        <span className="font-semibold"> guarantee results</span> — or you 
-        <span className="font-semibold"> don’t pay</span>. Your success is my reputation, and I stand behind every campaign I run.”
-      </p>
+  {/* <ShieldCheck className="inline-block text-green-400 mb-1 mr-2 size-5" /> */}
+  “You only pay for <span className="font-semibold"> results</span>. I personally <span className="font-medium">run your outreach</span>, track every lead, and <span className="font-semibold">stand behind every campaign</span> with a results guarantee.”
+</p>
+
 
       {/* Name & Title */}
-      <div className="flex items-center justify-center gap-5 mt-10 border w-fit mx-auto rounded-2xl p-4">
-        <div className="w-16 h-16 relative  rounded-full overflow-hidden ">
+      <div className="flex items-center justify-center gap-5 mt-10  w-fit mx-auto rounded-2xl p-4">
+        <div className="w-20 h-20 relative  rounded-sm overflow-hidden ">
         <Image
           src={greece}
           alt="Founder"

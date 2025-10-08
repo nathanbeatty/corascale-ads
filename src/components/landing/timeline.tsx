@@ -43,7 +43,7 @@ export default function TimelineImplementation() {
             {/* Left image */}
             <div>
               <div className="w-full col-span-1 relative rounded-xl overflow-hidden h-40 md:h-140">
-                <div className="absolute inset-0 bg-gradient-to-t backdrop-blur-xs rounded-xl from-white/40 via-transparent z-20 to-transparent mix-blend-multiply" />
+                <div className="absolute top-0 right-0 bottom-0 left-0 backdrop-blur-sm rounded-xl z-20 " />
                 <Image
                   src="https://i.pinimg.com/736x/d5/39/58/d5395846159014bf17bda9005b0e926c.jpg"
                   alt="Implementation Image"
@@ -64,7 +64,7 @@ export default function TimelineImplementation() {
               <div className="mt-6 space-y-6">
                 {steps.map(({ title, desc, icon: Icon }, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <Icon className="mt-1 text-primary h-5 w-5 flex-shrink-0" />
+                    {/* <Icon className="mt-1 text-primary h-5 w-5 flex-shrink-0" /> */}
                     <div>
                       <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100">
                         {title}

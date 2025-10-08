@@ -25,9 +25,9 @@ export default function BeforeAfterCorascale() {
     <section className="  bg-white dark:bg-neutral-950">
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
-        <div className="mb-10 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
-            You Focus on What Matters
+        <div className="mb-10">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight">
+            Before & After
           </h2>
         </div>
 
@@ -74,7 +74,7 @@ export default function BeforeAfterCorascale() {
               <ul className="space-y-4 text-left">
                 {afterTasks.map(({ icon: Icon, label }, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                    <Icon className="w-5 h-5  flex-shrink-0" />
                     <span className="text-xl font-light text-white">{label}</span>
                   </li>
                 ))}
@@ -89,7 +89,7 @@ export default function BeforeAfterCorascale() {
               <div className="relative w-full h-32 overflow-hidden rounded-xl">
                 <div className="absolute inset-0 backdrop-blur-xs rounded-xl bg-white/10 z-10" />
                 <Image
-                  src="https://i.pinimg.com/736x/03/ec/39/03ec396e746f6c8227e2606559cc77f0.jpg"
+                  src="https://i.pinimg.com/736x/44/5d/90/445d90bec5fd581f432a330ef58dad48.jpg"
                   alt="Cover Image"
                   fill
                   className="object-cover"

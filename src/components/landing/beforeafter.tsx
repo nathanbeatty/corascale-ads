@@ -87,7 +87,7 @@ export default function BeforeAfterCorascale() {
               </div>
 
               <div className="relative w-full h-32 overflow-hidden rounded-xl">
-                <div className="absolute inset-0 backdrop-blur-xs rounded-xl bg-white/10 z-10" />
+                <div className="absolute inset-0 backdrop-blur-lg rounded-xl bg-white/10 z-10" />
                 <Image
                   src="https://i.pinimg.com/736x/44/5d/90/445d90bec5fd581f432a330ef58dad48.jpg"
                   alt="Cover Image"

@@ -1,4 +1,4 @@
-import { Phone, TrendingUp, WavesIcon } from "lucide-react";
+import { ArrowRight, Phone, TrendingUp, WavesIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export default function Header(){
 
 <Button  asChild>
               <Link href = "#BOOKCTA">
-              Let's Talk <Phone/>
+              Apply Now <ArrowRight/>
               </Link>
               </Button>
               </div>

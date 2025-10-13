@@ -9,13 +9,13 @@ export default function BookMeetingCTA() {
       <div className="max-w-xl mx-auto">
         {/* Text */}
         <div className="flex flex-col w-full gap-6 pt-20 md:px-10 text-center">
-          <h2 className="text-3xl font-medium mx-auto tracking-tight">
-            Done For You Outbound — See How We Can Grow Your Business
-          </h2>
+         <h2 className="text-3xl font-medium  mx-auto tracking-tight">
+  Ready to Add 5-10 Qualified Meetings a Month?
+</h2>
 
-          <p className="text-lg max-w-md mx-auto text-muted-foreground">
-            Request a meeting and we'll get back to you ASAP.
-          </p>
+<p className="text-lg mx-auto text-muted-foreground">
+  Schedule a call and see how our outbound system can consistently bring you sales-ready opportunities.
+</p>
         </div>
 
         {/* Form */}

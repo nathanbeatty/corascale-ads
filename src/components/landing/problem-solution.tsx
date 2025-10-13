@@ -1,21 +1,25 @@
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, TrendingUp } from "lucide-react";
 
 export default function ProblemSolution() {
   return (
-    <section className="flex justify-center items-center py-10 md:py-16 px-4">
-      <p className="text-center font-inter leading-relaxed sm:leading-10 max-w-2xl text-2xl sm:text-3xl lg:text-4xl">
-        Stop wasting time on{" "}
-        <span className="inline-flex flex-wrap items-center gap-2 border border-black font-inter text-base sm:text-lg tracking-tight font-medium rounded-full px-3 sm:px-4 py-1">
-          <User className="w-4 h-4 sm:w-5 sm:h-5" />
-          cold outreach
-        </span>{" "}
-        that goes nowhere. We handle the entire process you only pay for{" "}
-        <span className="inline-flex flex-wrap items-center gap-2 border border-black font-inter text-base sm:text-lg tracking-tight font-medium rounded-full px-3 sm:px-4 py-1">
-          <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-          qualified appointments
-        </span>{" "}
-        
-      </p>
+    <section className="flex justify-center items-center py-16 md:px-6 bg-background">
+      <div className="max-w-3xl text-center">
+        <h2 className="font-inter text-2xl sm:text-3xl lg:text-4xl leading-relaxed sm:leading-snug text-foreground">
+          You built your business on expertise, not chasing leads.
+          <span className="block mt-10">
+            We guarantee{" "}
+            <span className="inline-flex items-center gap-2 border border-foreground/30 bg-muted/50 rounded-full px-4 py-1.5 text-base sm:text-lg font-medium">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+              5–10 qualified meetings
+            </span>{" "} every month and run your entire outbound engine, so you can stay focused on {" "}
+            <span className="inline-flex items-center gap-2 border border-foreground/30 bg-muted/50 rounded-full px-4 py-1.5 text-base sm:text-lg font-medium">
+              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />
+              clients
+            </span>
+            .
+          </span>
+        </h2>
+      </div>
     </section>
   );
 }

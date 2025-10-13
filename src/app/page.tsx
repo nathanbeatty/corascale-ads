@@ -5,12 +5,17 @@ import Header from "@/components/landing/header";
 import Hero from "@/components/landing/hero";
 import BookMeetingCTA from "@/components/landing/booking-cta";
 import ProblemSolution from "@/components/landing/problem-solution";
-
+import TwoCardSolution from "@/components/landing/two-card-solution";
 import BeforeAfterCorascale from "@/components/landing/beforeafter";
-
+import CorascaleOffer from "@/components/landing/corascale-offer";
 import TimelineImplementation from "@/components/landing/timeline";
 import FounderCardThree from "@/components/landing/founder3";
 import FounderCardTwo from "@/components/landing/founder2";
+// import LogoCloud from "@/components/logo-cloud";
+import LogoCloud from "@/components/landing/logoslider";
+import FeaturesSix from "@/components/features-six";
+import PricingCard from "@/components/landing/pricing-card";
+
 export default function Home() {
   return (
     <div className="">
@@ -22,10 +27,9 @@ export default function Home() {
       
       <Hero/>
       <ProblemSolution/>
-      {/* <TwoCardSolution/> */}
-      <BeforeAfterCorascale/>
-      <TimelineImplementation/>
-      {/* <FounderCard/> */}
+      <CorascaleOffer/>
+      <FeaturesSix/>
+      <PricingCard/>
       <FounderCardTwo/>
       <BookMeetingCTA/>
      

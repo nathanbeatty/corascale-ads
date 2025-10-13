@@ -14,7 +14,7 @@ export default function FeaturesSix() {
             <div className="py-12">
                 <div className="mx-auto w-full max-w-5xl">
                     <div>
-                        <h2 className="text-foreground max-w-2xl text-center text-balance text-3xl font-semibold">How It Works</h2>
+                        <h2 className="text-foreground  text-center text-balance text-3xl font-semibold">How It Works</h2>
                     </div>
                     <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         <Card

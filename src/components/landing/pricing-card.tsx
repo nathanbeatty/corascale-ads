@@ -9,7 +9,7 @@ export default function PricingCard(){
             <div className="py-12">
                 <div className="mx-auto w-full max-w-5xl">
                     <div>
-                        <h2 className="text-foreground max-w-2xl mb-5 text-center text-balance text-3xl font-semibold">Pricing</h2>
+                        <h2 className="text-foreground  mb-5 text-center text-balance text-3xl font-semibold">Pricing</h2>
                     </div>
                     
 

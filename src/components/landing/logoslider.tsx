@@ -3,7 +3,7 @@ import { ProgressiveBlur } from "../ui/progressive-blur"
 
 export default function LogoCloud() {
     return (
-        <div className="overflow-hidden max-w-xs mx-auto w-full">
+        <div className="overflow-hidden max-w-xs md:max-w-7xl mx-auto w-full">
         <section className="bg-background overflow-hidden py-8 md:py-0">
             <div className="group relative mx-auto md:max-w-7xl w-full px-4 md:px-6">
                 <div className="flex flex-col items-center md:flex-row md:gap-0">
@@ -13,7 +13,7 @@ export default function LogoCloud() {
                     </div>
                     
                     {/* Logo Slider Section */}
-                    <div className="relative w-full rounded-full overflow-hidden max-w-full  md:w-[calc(100%-11rem)]">
+                    <div className="relative w-full rounded-full md:rounded-none overflow-hidden max-w-full  md:w-[calc(100%-11rem)]">
                         <InfiniteSlider
                             speedOnHover={20}
                             speed={40}

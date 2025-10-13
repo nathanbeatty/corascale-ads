@@ -42,7 +42,7 @@ export default function CorascaleOffer() {
   return (
     <div className="py-10">
       <h3 className="text-3xl text-center mb-5 font-semibold">What We Do</h3>
-    <section className="grid gap-4 md:grid-cols-2 max-w-4xl mx-auto ">
+    <section className="grid gap-4 md:grid-cols-1 max-w-2xl mx-auto ">
     
       <SolutionCard
         icon="https://i.pinimg.com/736x/ab/ac/01/abac01159f965f139d39370e69f7d277.jpg"

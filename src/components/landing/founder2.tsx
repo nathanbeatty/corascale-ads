@@ -15,7 +15,7 @@ export default function FounderCardTwo() {
 
 
       {/* Name & Title */}
-      <div className="flex items-center justify-center gap-5 mt-10  w-fit mx-auto rounded-2xl p-4">
+      <div className="flex items-center justify-center gap-5 mt-6  w-fit mx-auto rounded-2xl p-4">
         <div className="w-20 h-20 relative  rounded-sm overflow-hidden ">
         <Image
           src={greece}

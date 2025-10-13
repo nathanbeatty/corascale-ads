@@ -9,7 +9,7 @@ export default function BookMeetingCTA() {
       <div className="max-w-xl mx-auto">
         {/* Text */}
         <div className="flex flex-col w-full gap-6 pt-20 md:px-10 text-center">
-         <h2 className="text-3xl font-medium  mx-auto tracking-tight">
+         <h2 className="text-3xl font-semibold  mx-auto tracking-tight">
   Ready to Add 5-10 Qualified Meetings a Month?
 </h2>
 

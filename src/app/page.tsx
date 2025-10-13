@@ -15,6 +15,7 @@ import FounderCardTwo from "@/components/landing/founder2";
 import LogoCloud from "@/components/landing/logoslider";
 import FeaturesSix from "@/components/features-six";
 import PricingCard from "@/components/landing/pricing-card";
+import FAQsTwo from "@/components/faqs-2";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <FeaturesSix/>
       <PricingCard/>
       <FounderCardTwo/>
+      <FAQsTwo/>
       <BookMeetingCTA/>
      
     <div className="flex px-2 md:px-20 mt-2 justify-center">

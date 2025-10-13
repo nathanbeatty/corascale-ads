@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { ArrowUp, CalendarCheck, Globe, Play, Plus, Rocket, Signature, Sparkles, Target } from 'lucide-react'
+import { ArrowUp, CalendarCheck, ChartArea, Globe, Play, Plus, Rocket, Signature, Sparkles, Target } from 'lucide-react'
 import Image from 'next/image'
 
 const MESCHAC_AVATAR = 'https://avatars.githubusercontent.com/u/47919550?v=4'
@@ -49,7 +49,7 @@ export default function FeaturesSix() {
                             
                             className="group  p-6">
                             <div className="flex gap-2 items-center">
-                            <Target className="text-primary size-5" />
+                            <ChartArea className="text-primary size-5" />
                             <span className="font-mono">003</span>
                             </div>
                             <h3 className="text-foreground  text-xl font-semibold">Booking & Reporting</h3>

@@ -3,8 +3,8 @@ import { ProgressiveBlur } from "../ui/progressive-blur"
 
 export default function LogoCloud() {
     return (
-        <div className="overflow-hidden max-w-xs md:max-w-7xl mx-auto w-full">
-        <section className="bg-background overflow-hidden py-8 md:py-0">
+        <div className="relative overflow-hidden w-full md:max-w-7xl mx-auto">
+        <section className="bg-background overflow-hidden py-8 md:py-0 ">
             <div className="group relative mx-auto md:max-w-7xl w-full px-4 md:px-6">
                 <div className="flex flex-col items-center md:flex-row md:gap-0">
                     {/* Text Section */}
@@ -13,7 +13,8 @@ export default function LogoCloud() {
                     </div>
                     
                     {/* Logo Slider Section */}
-                    <div className="relative w-full rounded-full md:rounded-none overflow-hidden max-w-full  md:w-[calc(100%-11rem)]">
+                    <div className="relative w-full rounded-full h-40 md:rounded-none overflow-hidden max-w-full  md:w-[calc(100%-11rem)]">
+                        <div className="absolute w-full left-0 right-0 top-0 bottom-0">
                         <InfiniteSlider
                             speedOnHover={20}
                             speed={40}
@@ -21,7 +22,7 @@ export default function LogoCloud() {
                             className="">
                             <div className="flex items-center justify-center">
                                 <img
-                                    className="h-4 md:h-5 w-auto dark:invert"
+                                    className="h-4 md:h-4 w-auto dark:invert"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpDXeB5v1FOq31fdhGiN6LonRlaD7_KEsgbw&s"
                                     alt="Loreal"
                                 />
@@ -37,7 +38,7 @@ export default function LogoCloud() {
                             
                             <div className="flex items-center justify-center">
                                 <img
-                                    className="h-30 w-auto dark:invert"
+                                    className="h-40 w-auto dark:invert"
                                     src="https://www.founderscircle.com/wp-content/uploads/2025/01/MaintainX-Black-logo.png"
                                     alt="MaintainX"
                                 />
@@ -53,7 +54,7 @@ export default function LogoCloud() {
                             
                             <div className="flex items-center justify-center">
                                 <img
-                                    className="h-20 w-auto dark:invert"
+                                    className="h-30 w-auto dark:invert"
                                     src="https://tock-public.imgix.net/join/integrations/Commerce7.png"
                                     alt="Commerce7"
                                 />
@@ -71,6 +72,7 @@ export default function LogoCloud() {
                             direction="right"
                             blurIntensity={1}
                         />
+                        </div>
                     </div>
                 </div>
             </div>

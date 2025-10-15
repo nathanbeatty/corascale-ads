@@ -8,9 +8,10 @@ export default function FounderCardTwo() {
       
 
       {/* Quote */}
-      <p className="mt-6 text-xl md:text-2xl leading-relaxed tracking-tight font-light max-w-xl mx-auto ">
-  {/* <ShieldCheck className="inline-block text-green-400 mb-1 mr-2 size-5" /> */}
-  “You only pay for <span className="font-semibold"> results</span>. I personally <span className="font-medium">run your outreach</span>, track every lead, and <span className="font-semibold">stand behind every campaign</span> with a results guarantee.”
+      <p className="mt-6 text-xl md:text-2xl leading-relaxed tracking-tight max-w-xl mx-auto">
+  “Think of us as your growth partner, not another agency.  
+  We handle the strategy, outreach, and execution,  
+  so you can stay focused on closing deals and serving clients.”
 </p>
 
 

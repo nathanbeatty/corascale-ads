@@ -16,6 +16,7 @@ import LogoCloud from "@/components/landing/logoslider";
 import FeaturesSix from "@/components/features-six";
 import PricingCard from "@/components/landing/pricing-card";
 import FAQsTwo from "@/components/faqs-2";
+import CorascaleOffer2 from "@/components/landing/corascale-offer2";
 
 export default function Home() {
   return (
@@ -27,8 +28,9 @@ export default function Home() {
       <div className="grid gap-5 md:gap-20 p-4 md:px-8">
       
       <Hero/>
-      <ProblemSolution/>
-      <CorascaleOffer/>
+      
+      <CorascaleOffer2/>
+      
       <FeaturesSix/>
       <PricingCard/>
       <FounderCardTwo/>

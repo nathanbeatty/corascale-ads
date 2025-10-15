@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, TrendingUp, WavesIcon } from "lucide-react";
+import { ArrowRight, ArrowRightToLine, Phone, TrendingUp, WavesIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,9 +17,9 @@ export default function Header(){
     </Link>
     </Button> */}
 
-<Button  asChild>
+<Button  asChild className="group">
               <Link href = "#BOOKCTA">
-              Apply Now <ArrowRight/>
+              Apply Now <ArrowRightToLine className = "group-hover:ml-2 transition-all duration-150 ease-in-out"/>
               </Link>
               </Button>
               </div>

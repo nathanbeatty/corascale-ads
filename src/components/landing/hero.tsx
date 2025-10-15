@@ -2,6 +2,7 @@ import { CheckCircle2, Calendar, TrendingUp, DollarSign } from "lucide-react";
 import NotificationStack from "../ui/cycling-cards";
 import { Button } from "../ui/button";
 import LogoCloud from "./logoslider";
+import ProblemSolution from "./problem-solution";
 
 export default function Hero() {
   return (
@@ -47,6 +48,7 @@ export default function Hero() {
       </div>
     </section>
     <LogoCloud/>
+    <ProblemSolution/>
     </div>
   );
 }

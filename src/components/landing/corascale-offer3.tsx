@@ -8,9 +8,13 @@ interface MockupProps {
   bgImage: string
 }
 
+const clientPhotos = [
+  "https://i.pinimg.com/736x/a6/d6/dd/a6d6dda9a016d8b084dd1ef2ca6c03fa.jpg"
+]
+
 function UIMockup({ type, bgImage }: MockupProps) {
   return (
-    <div className="relative h-64 md:h-[28rem] w-full rounded-3xl overflow-hidden">
+    <div className="relative h-96 md:h-[36rem] w-full rounded-3xl overflow-hidden">
       {/* Blurred Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center filter blur-md scale-105"
@@ -18,49 +22,64 @@ function UIMockup({ type, bgImage }: MockupProps) {
       />
 
       {/* Glass Card Overlay */}
-      <div className="relative w-full h-full flex items-center justify-center p-5">
-        {type === "calendar" && (
-          <div className="w-full max-w-lg bg-white/60 rounded-xl border border-white/20 p-5 backdrop-blur-sm">
-            <div className="flex justify-between items-center mb-3">
-              <span className="font-medium text-gray-800 text-sm">Your Week</span>
-              <span className="text-gray-500 text-xs">Oct 2025</span>
-            </div>
-            <div className="grid grid-cols-7 gap-1 text-xs text-gray-500 mb-2">
-              {["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(day => (
-                <div key={day} className="text-center">{day}</div>
-              ))}
-            </div>
-            <div className="grid grid-cols-7 gap-1">
-              {[...Array(28)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-6 rounded-sm flex items-center justify-center text-xs ${
-                    [8, 12, 15].includes(i)
-                      ? "bg-blue-100/50 text-blue-700 font-medium"
-                      : "bg-gray-100/50 text-gray-400"
-                  }`}
-                >
-                  {i+1}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+      <div className="relative w-full h-full flex items-center justify-center p-8">
+       {type === "calendar" && (
+  <div className="w-full max-w-2xl bg-white/70 rounded-2xl border border-white/20 p-6 backdrop-blur-md shadow-lg">
+    <div className="flex justify-between items-center mb-4">
+      <span className="font-semibold text-gray-900 text-lg">Week Overview</span>
+      <span className="text-gray-500 text-sm">Oct 2025</span>
+    </div>
+    <div className="grid grid-cols-7 gap-2 text-sm text-gray-600 mb-3">
+      {["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(day => (
+        <div key={day} className="text-center">{day}</div>
+      ))}
+    </div>
+    <div className="grid grid-cols-7 gap-2">
+      {[...Array(28)].map((_, i) => (
+        <div
+          key={i}
+          className={`h-10 rounded-md flex items-center justify-center text-sm relative ${
+            [3, 7, 10, 14, 18].includes(i)
+              ? "bg-green-100/60 text-green-800 font-semibold"
+              : "bg-gray-100/50 text-gray-400"
+          }`}
+        >
+          {i+1}
+          
+          
+        </div>
+      ))}
+    </div>
+    <div className="mt-3 text-sm text-gray-500">
+      
+    </div>
+  </div>
+)}
 
         {type === "meeting" && (
-          <div className="w-full max-w-md bg-white/60 rounded-xl border border-white/20 p-5 backdrop-blur-sm">
-            <div className="mb-2">
-              <h4 className="text-gray-800 font-medium text-sm">Meeting Booked</h4>
-              <p className="text-gray-500 text-xs">Jordan | Thu, 2:00 PM EST</p>
+          <div className="w-full max-w-xl bg-white rounded-2xl border border-gray-200 p-6 shadow-lg flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {clientPhotos.map((src, idx) => (
+                    <img key={idx} src={src} className="w-10 h-10 object-cover rounded-full border-2 border-white" />
+                  ))}
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900">Meeting Confirmed</h4>
+                  <p className="text-gray-500 text-sm">Jordan | Thu, 2:00 PM EST</p>
+                </div>
+              </div>
+              <Calendar className="w-6 h-6 text-blue-600" />
             </div>
-            <div className="bg-gray-100/50 rounded-md p-2 text-xs text-gray-600 border border-white/20">
+            <div className="bg-blue-50 rounded-md p-3 text-sm text-blue-900 border border-blue-100">
               “Looking forward to our chat.”
             </div>
-            <div className="mt-3 flex gap-2">
-              <button className="flex-1 text-white bg-blue-600 text-xs font-medium py-1 rounded-md hover:bg-blue-700">
-                View Calendar
+            <div className="flex gap-3 mt-2">
+              <button className="flex-1 text-white bg-blue-600 text-sm font-medium py-2 rounded-md hover:bg-blue-700">
+                Add to Calendar
               </button>
-              <button className="flex-1 text-gray-700 border border-white/20 text-xs py-1 rounded-md hover:bg-gray-100/30">
+              <button className="flex-1 text-gray-700 border border-gray-300 text-sm py-2 rounded-md hover:bg-gray-100">
                 Reschedule
               </button>
             </div>
@@ -68,28 +87,39 @@ function UIMockup({ type, bgImage }: MockupProps) {
         )}
 
         {type === "graph" && (
-          <div className="w-full max-w-lg bg-white/60 rounded-xl border border-white/20 p-5 backdrop-blur-sm">
-            <div className="flex justify-between items-center mb-3">
-              <span className="text-gray-800 font-medium text-sm">Pipeline</span>
-              <span className="text-gray-500 text-xs">This Month</span>
-            </div>
-            <div className="h-32 flex items-end gap-1">
-              {[30,50,70,40,60,80,50].map((h, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ height: 0 }}
-                  animate={{ height: `${h}%` }}
-                  transition={{ duration: 0.8, delay: i * 0.05 }}
-                  className="flex-1 border border-black rounded-xl"
-                />
-              ))}
-            </div>
-            <div className="mt-2 flex justify-between text-xs text-gray-500">
-              <span>Mon</span>
-              <span>Sun</span>
-            </div>
-          </div>
-        )}
+  <div className="w-full max-w-xl bg-white/80 rounded-2xl border border-white/20 p-6 backdrop-blur-md shadow-lg">
+    <div className="flex justify-between items-center mb-4">
+      <span className="text-gray-900 font-semibold text-lg">Pipeline</span>
+      <span className="text-gray-500 text-sm">This Month</span>
+    </div>
+
+    {/* Background grid */}
+    <div className="relative h-44 flex items-end gap-2 md:gap-4">
+      <div className="absolute inset-0 grid grid-rows-5 border-t border-gray-200 pointer-events-none">
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className=" w-full" />
+        ))}
+      </div>
+
+      {[30,50,70,40,60,80,50,70,80,70,40,60,90,50].map((h, i) => (
+        <motion.div
+          key={i}
+          initial={{ height: 0 }}
+          animate={{ height: `${h}%` }}
+          transition={{ duration: 0.8, delay: i * 0.05 }}
+          className="flex-1 relative rounded-full bg-gradient-to-t from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 cursor-pointer"
+        >
+          
+        </motion.div>
+      ))}
+    </div>
+
+    <div className="mt-3 flex justify-between text-sm text-gray-500">
+      <span>Start</span>
+      <span>End</span>
+    </div>
+  </div>
+)}
       </div>
     </div>
   )
@@ -111,17 +141,17 @@ function SolutionCard({ title, description, lucideIcon: Icon, type, bgImage, fli
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className={`relative grid md:grid-cols-2 items-center gap-16 ${
+      className={`relative grid md:grid-cols-2 items-center gap-20 ${
         flip ? "md:[&>*:first-child]:order-2" : ""
       }`}
     >
       <UIMockup type={type} bgImage={bgImage} />
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-3 text-gray-900 mb-2">
-          {Icon && <Icon className="w-5 h-5 text-gray-800" />}
-          <h3 className="text-xl md:text-2xl font-medium tracking-tight">{title}</h3>
+      <div className="relative z-10 px-2">
+        <div className="text-gray-900 mb-4">
+          {Icon && <Icon className="w-6 h-6 text-gray-800 mb-4" />}
+          <h3 className="text-2xl font-semibold tracking-tight">{title}</h3>
         </div>
-        <p className="text-gray-600 text-sm md:text-base max-w-md">{description}</p>
+        <p className="text-gray-700 text-lg max-w-lg">{description}</p>
       </div>
     </motion.div>
   )
@@ -129,20 +159,20 @@ function SolutionCard({ title, description, lucideIcon: Icon, type, bgImage, fli
 
 export default function CorascaleOffer3() {
   return (
-    <section className="relative overflow-hidden py-28">
-      <div className="relative max-w-6xl mx-auto px-6 md:px-10 z-10">
-        <div className="text-center mb-24">
-          <h2 className="text-3xl md:text-5xl font-medium text-gray-900 tracking-tight">
+    <section className="relative overflow-hidden py-32">
+      <div className="relative max-w-6xl mx-auto px-4 md:px-10 z-10">
+        <div className="text-center mb-28">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 tracking-tight">
             Designed for Momentum
           </h2>
-          <p className="mt-5 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Every step of your pipeline — visualized, automated, and built to help you move forward with calm precision.
+          <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Your entire outbound engine, done-for-you to guarantee results and booked meetings on your calendar.
           </p>
         </div>
 
-        <div className="space-y-28">
+        <div className="space-y-32">
           <SolutionCard
-            title="Save Time Effortlessly"
+            title="Save Time"
             description="Stop wasting hours prospecting or following up with cold leads. We handle the research, copywriting, and outreach automation — all while you stay focused on your clients."
             lucideIcon={TrendingUp}
             type="meeting"

@@ -56,9 +56,14 @@ export default function FeaturesSix() {
     <section>
       <div className="py-12">
         <div className="mx-auto w-full max-w-5xl">
-          <div>
-            <h2 className="text-foreground text-center text-balance text-3xl font-semibold">How It Works</h2>
-          </div>
+          <div className="text-center mb-24">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 tracking-tight">
+            How We Deliver
+          </h2>
+          <p className="mt-5 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Our unique approach delivers impactful results for your business.
+          </p>
+        </div>
           <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {steps.map((step) => (
               <StepCard key={step.number} {...step} />

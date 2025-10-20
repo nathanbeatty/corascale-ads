@@ -26,7 +26,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-inter font-semibold tracking-tight text-3xl md:text-6xl leading-tight max-w-3xl mx-auto">
-            Predictable Pipeline for Consultants
+            Predictable Pipeline for IT Services Firms
           </h1>
           {/* Subheadline */}
           <p className="mt-6 text-lg md:text-xl  max-w-md mx-auto">

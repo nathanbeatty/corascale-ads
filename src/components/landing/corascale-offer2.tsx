@@ -25,7 +25,7 @@ function SolutionCard({ icon, title, description, stat, lucideIcon: Icon, flip =
           flip ? "md:order-2" : "md:order-1"
         }`}>
       <div
-        className={`w-full h-80 shrink-0 rounded-4xl relative overflow-hidden `}
+        className={`w-full h-100 shrink-0 rounded-4xl relative overflow-hidden `}
       >
         <div className="absolute left-0 right-0 top-0 bottom-0 backdrop-blur-xs rounded-5xl bg-white/5 z-10"/>
         <Image
@@ -54,18 +54,18 @@ export default function CorascaleOffer2() {
   return (
     <div className="py-10">
       {/* <h3 className="text-3xl text-center mb-5 font-semibold">What We Do</h3> */}
-      <section className="grid gap-10 md:gap-30 max-w-5xl mx-auto">
+      <section className="grid gap-10 md:gap-30 max-w-7xl mx-auto">
         <SolutionCard
           icon="https://i.pinimg.com/1200x/43/b6/2c/43b62c21d1abce4dbefda1e5435db71e.jpg"
           title="Save Time"
-          description="Stop wasting hours prospecting or following up with cold leads. Corascale handles the research, copywriting, and outreach automation — all while you stay focused on your clients."
+          description="Stop wasting hours prospecting or following up with cold leads. We handle the research, copywriting, and outreach automation — all while you stay focused on your clients."
           stat="No more chasing leads without results"
           lucideIcon={TrendingUp}
         />
         <SolutionCard
           icon="https://i.pinimg.com/1200x/7f/d1/73/7fd1735a783d0323f130c01aaa8c63d5.jpg"
           title="Fill Your Calendar"
-          description="Get 5–10 qualified meetings every month with decision-makers ready to talk. We don’t just send messages — we deliver booked calls on your calendar."
+          description="Get 5–10 IT decision-maker meetings every month. CTOs, VPs of IT, COOs, and Operations leaders at SMBs who need your services. We don’t just send messages — we deliver booked calls on your calendar."
           stat="Consistent, qualified meetings."
           lucideIcon={Calendar}
           flip
@@ -73,7 +73,7 @@ export default function CorascaleOffer2() {
         <SolutionCard
           icon="https://i.pinimg.com/1200x/e2/44/0f/e2440fad2af1179669a2c5ab800a7a45.jpg"
           title="Close More Deals"
-          description="Every lead we generate is verified, engaged, and relevant to your business. You get a pipeline of opportunities that convert — not just names on a list."
+          description="Every lead is a verified IT decision-maker at SMBs ready to talk about infrastructure, security, and compliance. Pipeline that actually converts."
           stat="Meetings that are ready to convert"
           lucideIcon={DollarSign}
         />

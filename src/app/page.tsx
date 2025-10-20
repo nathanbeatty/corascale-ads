@@ -17,6 +17,8 @@ import FeaturesSix from "@/components/features-six";
 import PricingCard from "@/components/landing/pricing-card";
 import FAQsTwo from "@/components/faqs-2";
 import CorascaleOffer2 from "@/components/landing/corascale-offer2";
+import CorascaleOffer3 from "@/components/landing/corascale-offer3";
+import Features from "@/components/features-10";
 
 export default function Home() {
   return (
@@ -28,11 +30,16 @@ export default function Home() {
       <div className="grid gap-5 md:gap-20 p-4 md:px-8">
       
       <Hero/>
-      
-      <CorascaleOffer2/>
+
+</div>
+{/* <Features/> */}
+      <CorascaleOffer3/>
+      <div className="grid gap-5 md:gap-20 p-4 md:px-8">
       
       <FeaturesSix/>
+      </div>
       <PricingCard/>
+      <div className="grid gap-5 md:gap-20 p-4 md:px-8">
       <FounderCardTwo/>
       <FAQsTwo/>
       <BookMeetingCTA/>

@@ -12,6 +12,18 @@ export default function FAQsTwo() {
       'We handle the entire outbound process — from crafting your messaging and building targeted prospect lists, to sending personalized emails and booking meetings directly on your calendar. You simply show up to qualified calls with your ideal clients.',
   },
   {
+    id: 'item-8',
+    question: 'What types of IT services do you work with?',
+    answer:
+      "Managed IT Services Firms (MSPs), managed security (MSSP), IT staffing, IT consulting, and any firm selling high-ticket IT services to SMBs."
+  },
+  {
+    id: 'item-9',
+    question: 'Who are the decision-makers you reach?',
+    answer:
+      "CTOs, VPs of IT, IT Directors, COOs, CFOs — anyone responsible for IT infrastructure and vendor decisions at SMBs."
+  },
+  {
     id: 'item-2',
     question: 'Who do you work with?',
     answer:
@@ -51,7 +63,7 @@ export default function FAQsTwo() {
 
 
     return (
-        <section className="py-10 md:py-16">
+        <section className="py-10 md:py-16" id = "FAQ">
             <div className="mx-auto max-w-5xl">
                 <div className="mx-auto max-w-xl text-center">
                     <h2 className="text-balance text-3xl font-semibold">FAQ</h2>

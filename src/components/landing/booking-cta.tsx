@@ -5,16 +5,16 @@ import EmailSubmit from "../ui/email-submit";
 
 export default function BookMeetingCTA() {
   return (
-    <section id="BOOKCTA" className="dark:bg-muted/25 py-5">
+    <section id="BOOKING" className="dark:bg-muted/25 py-5">
       <div className="max-w-xl mx-auto">
         {/* Text */}
         <div className="flex flex-col w-full gap-6 pt-20 md:px-10 text-center">
          <h2 className="text-3xl font-semibold  mx-auto tracking-tight">
-  Ready to Add 5-10 Qualified Meetings a Month?
+  Ready to Add 5-10 Qualified Meetings a Month? 
 </h2>
 
 <p className="text-lg mx-auto text-muted-foreground">
-  Schedule a call and see how our outbound system can consistently bring you sales-ready opportunities.
+  Schedule a strategy call and see how our outbound system can consistently bring you sales-ready opportunities.
 </p>
         </div>
 

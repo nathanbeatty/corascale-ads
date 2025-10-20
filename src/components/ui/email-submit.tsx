@@ -105,7 +105,7 @@ export default function EmailSubmit() {
           {result && <p className="text-green-500 text-sm">{result}</p>}
 
           <Button type="submit" size="xl" variant="default" disabled={loading}>
-            {loading ? 'Requesting...' : 'Request Meeting'} <ArrowRight />
+            {loading ? 'Sending...' : 'Book Strategy Call'} <ArrowRight />
           </Button>
         </form>
       ) : (

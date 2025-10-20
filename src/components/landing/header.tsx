@@ -11,15 +11,21 @@ export default function Header(){
             <Image src = {logo} width={120} height={20} alt ="logo"/>
               {/* <span className=" tracking-tight font-light font-inter text-2xl md:text-2xl">corascale <span className = "font-inter tracking-tight font-normal text-sm">Agency</span></span> */}
               <div className="flex items-center gap-2">
-{/* <Button variant={"ghost"} asChild>
+
+                <Button className = "hidden md:flex" variant={"ghost"} asChild>
+    <Link href = "#FAQ">
+    FAQ
+    </Link>
+    </Button>
+<Button className = "hidden md:flex" variant={"ghost"} asChild>
     <Link href = "#PRICING">
     Pricing
     </Link>
-    </Button> */}
+    </Button>
 
-<Button  asChild className="group">
-              <Link href = "#BOOKCTA">
-              Apply Now <ArrowRightToLine className = "group-hover:ml-2 transition-all duration-150 ease-in-out"/>
+<Button   asChild className="group">
+              <Link href = "#BOOKING">
+              Book Call <Phone className = "group-hover:ml-2 transition-all duration-150 ease-in-out"/>
               </Link>
               </Button>
               </div>

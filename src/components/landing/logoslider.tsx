@@ -3,9 +3,9 @@ import { ProgressiveBlur } from "../ui/progressive-blur"
 
 export default function LogoCloud() {
     return (
-        <div className="relative overflow-hidden w-full md:max-w-7xl mx-auto">
+        <div className="relative overflow-hidden w-full md:max-w-6xl mx-auto">
         <section className="bg-background overflow-hidden py-8 md:py-0 ">
-            <div className="group relative mx-auto md:max-w-7xl w-full px-4 md:px-6">
+            <div className="group relative mx-auto md:max-w-6xl w-full px-4 md:px-6">
                 <div className="flex flex-col items-center md:flex-row md:gap-0">
                     {/* Text Section */}
                     <div className="w-full md:max-w-44 md:border-r md:pr-6 text-center md:text-end">

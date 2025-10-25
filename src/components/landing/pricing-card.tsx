@@ -116,7 +116,7 @@ export default function PricingCard() {
               {/* CTA Button */}
               <Button asChild className="w-full h-11 bg-white text-black hover:bg-white/90 font-medium text-base">
                 <Link href="#BOOKING">
-                  Book Strategy Call
+                  Apply Now
                 </Link>
               </Button>
               

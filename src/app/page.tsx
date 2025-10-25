@@ -20,6 +20,8 @@ import CorascaleOffer2 from "@/components/landing/corascale-offer2";
 import CorascaleOffer3 from "@/components/landing/corascale-offer3";
 import Features from "@/components/features-10";
 import CorascaleOffer4 from "@/components/landing/corascale-offer4";
+import BenefitsSection from "@/components/landing/benefits";
+import FeaturesNine from "@/components/ui/feature-nine";
 
 export default function Home() {
   return (
@@ -34,11 +36,12 @@ export default function Home() {
 
 </div>
 {/* <Features/> */}
-      <CorascaleOffer4/>
+      {/* <CorascaleOffer4/> */}
      
       <div className="grid gap-5 md:gap-20 p-4 md:px-8">
-      
-      <FeaturesSix/>
+      <BenefitsSection/>
+      <FeaturesNine/>
+      {/* <FeaturesSix/> */}
       </div>
       <PricingCard/>
       <div className="grid gap-5 md:gap-20 p-4 md:px-8">

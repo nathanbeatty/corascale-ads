@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowRightToLine, Phone, TrendingUp, WavesIcon } from "lucide-react";
+import { ArrowRight, ArrowRightToLine, Circle, CircleArrowOutUpRight, CircleArrowUpIcon, Dot, Phone, Send, TrendingUp, WavesIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +25,7 @@ export default function Header(){
 
 <Button   asChild className="group">
               <Link href = "#BOOKING">
-              Book Call <Phone className = "group-hover:ml-2 transition-all duration-150 ease-in-out"/>
+              Apply
               </Link>
               </Button>
               </div>

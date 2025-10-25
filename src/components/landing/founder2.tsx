@@ -1,10 +1,21 @@
 import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
 import greece from '@/images/greece.jpeg'
+import { Globe } from "../ui/globe";
 export default function FounderCardTwo() {
   return (
+    <div className="">
+      
     <div className="relative max-w-3xl mx-auto rounded-3xl py-10 md:py-16 px-6 md:px-12 text-center backdrop-blur-2xl bg-white/10 ">
       {/* Founder Image */}
+      
+<div className="">
+      <div className="mx-auto border-b-1 relative flex size-full max-w-lg items-center justify-center overflow-hidden   pb-40 md:pb-60">
+      
+      <Globe className=""/>
+      <div className="pointer-events-none absolute inset-0 h-full " />
+    </div>
+      </div>
       
 
       {/* Quote */}
@@ -32,6 +43,11 @@ export default function FounderCardTwo() {
       <p className=" font-inter text-gray-600 font-light tracking-tighter">Founder, Corascale</p>
       </div>
       </div>
+
+      
+    </div>
+
+    
     </div>
   );
 }

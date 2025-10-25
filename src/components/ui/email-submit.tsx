@@ -1,9 +1,8 @@
 'use client'
-
 import { Input } from './input'
 import { Button } from './button'
 import { useState } from 'react'
-import { ArrowRight, CircleCheck } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export default function EmailSubmit() {
   const [formData, setFormData] = useState({
@@ -14,7 +13,6 @@ export default function EmailSubmit() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -24,7 +22,6 @@ export default function EmailSubmit() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
-    setResult('')
     setLoading(true)
 
     if (!formData.name || !formData.email) {
@@ -38,80 +35,120 @@ export default function EmailSubmit() {
       formdata.append('name', formData.name)
       formdata.append('email', formData.email)
       formdata.append('business', formData.business || '')
-      formdata.append('access_key', 'fab20e4c-125f-450a-867f-7a097202b646') // replace with your Web3Forms access key
+      formdata.append('access_key', 'fab20e4c-125f-450a-867f-7a097202b646')
 
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body:formdata,
+        body: formdata,
       })
 
       const data = await res.json()
 
       if (data.success) {
-        setResult('✅ Form Submitted Successfully')
         setSubmitted(true)
         setFormData({ name: '', email: '', business: '' })
       } else {
-        setResult(data.message || 'Error submitting form.')
+        setError(data.message || 'Something went wrong. Please try again.')
       }
     } catch (err) {
       console.error(err)
-      setResult('Error submitting form. Please try again.')
+      setError('Unable to submit. Please try again.')
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="w-full mt-5 p-6 shadow-lg border  rounded-2xl border-gray-200 overflow-hidden tracking-tight">
-      
-
+    <div className="w-full">
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="grid gap-4">
-          <div>
-            <span className="text-xs">Full Name</span>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Name */}
+          <div className="space-y-2">
+            <label htmlFor="name" className="text-sm font-medium">
+              Full Name
+            </label>
             <Input
+              id="name"
               name="name"
               type="text"
               placeholder="John Smith"
               value={formData.name}
               onChange={handleChange}
               required
+              className="h-11"
             />
           </div>
-          <div>
-            <span className="text-xs">Business Email</span>
+
+          {/* Email */}
+          <div className="space-y-2">
+            <label htmlFor="email" className="text-sm font-medium">
+              Business Email
+            </label>
             <Input
+              id="email"
               name="email"
               type="email"
-              placeholder="name@your-email.com"
+              placeholder="john@company.com"
               value={formData.email}
               onChange={handleChange}
               required
+              className="h-11"
             />
           </div>
-          <div>
-            <span className="text-xs">Business Name</span>
+
+          {/* Business (optional) */}
+          <div className="space-y-2">
+            <label htmlFor="business" className="text-sm font-medium">
+              Company Name <span className="text-muted-foreground">(optional)</span>
+            </label>
             <Input
+              id="business"
               name="business"
               type="text"
-              placeholder="Your Business"
+              placeholder="Acme IT Services"
               value={formData.business}
               onChange={handleChange}
+              className="h-11"
             />
           </div>
 
-          {error && <p className="text-red-500 text-sm">{error}</p>}
-          {result && <p className="text-green-500 text-sm">{result}</p>}
+          {/* Error message */}
+          {error && (
+            <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm">
+              {error}
+            </div>
+          )}
 
-          <Button type="submit" size="xl" variant="default" disabled={loading}>
-            {loading ? 'Sending...' : 'Book Strategy Call'} <ArrowRight />
+          {/* Submit button */}
+          <Button 
+            type="submit" 
+            size="lg" 
+            className="w-full h-11 gap-2" 
+            disabled={loading}
+          >
+            {loading ? 'Submitting...' : 'Submit'}
+            {!loading && <ArrowRight className="w-4 h-4" />}
           </Button>
+
+          {/* Privacy note */}
+          <p className="text-xs text-center text-muted-foreground">
+            We'll never share your information. No spam, ever.
+          </p>
         </form>
       ) : (
-        <span className="text-left text-black rounded-2xl flex items-center gap-2 font-medium">
-          <CircleCheck className = "text-green-500"/>Thank you! We will reach out soon.
-        </span>
+        <div className="py-8 text-center space-y-3">
+          <div className="flex justify-center">
+            <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+              <CheckCircle2 className="w-6 h-6 text-green-600" />
+            </div>
+          </div>
+          <div className="space-y-1">
+            <h3 className="font-semibold text-lg">You're all set!</h3>
+            <p className="text-muted-foreground text-sm">
+              We'll reach out within 2 hours to schedule your call.
+            </p>
+          </div>
+        </div>
       )}
     </div>
   )

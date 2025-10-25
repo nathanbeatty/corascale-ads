@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
           {/* Subheadline */}
           <p className="mt-6 text-lg md:text-xl  max-w-md mx-auto">
-             Get 5-10 qualified meetings every month with your ideal clients.  
+             Get 5-10 qualified meetings per month with IT leaders who need your services. 
           </p>
         </div>
 
